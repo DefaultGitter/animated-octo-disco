@@ -9,14 +9,13 @@ def calc(expr):
                 left, right = int(left), int(right)
                 if sign == '+':
                     return left + right
-                if sign == '-':
+                elif sign == '-':
                     return left - right
-                if sign == '*':
+                elif sign == '*':
                     return left * right
-                if sign == '/':
+                elif sign == '/':
                     return left / right
             except (ValueError, TypeError):
                 raise ValueError(f"It must be with 2 numbers")
-
-
-print(calc('4/2'))
+            except ZeroDivisionError:
+                raise ZeroDivisionError('Do not destroy my universe')
