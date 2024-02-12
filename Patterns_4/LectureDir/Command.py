@@ -1,4 +1,3 @@
-# commander 1:20
 class Light:
     def turn_off(self):
         print('Light turned off')
@@ -39,8 +38,13 @@ class RemoteControl:
         self.command.execute()
 
 
-light = Light()
-lightOn = LightOnCommand(light)
-lightOff = LightOffCommand(light)
+light_o = Light()
+
+lightOn = LightOnCommand(light_o)
+lightOff = LightOffCommand(light_o)
 
 remoteControl = RemoteControl()
+# remoteControl.set_command(lightOn)
+remoteControl.set_command(lightOff)
+
+remoteControl.press_button()
