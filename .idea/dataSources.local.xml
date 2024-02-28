@@ -52,5 +52,10 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="DataBaseSQLite.db" uuid="f961d036-e470-41c1-951a-85e9c9ec0aa3">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" />
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>
