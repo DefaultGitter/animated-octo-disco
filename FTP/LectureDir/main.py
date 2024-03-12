@@ -20,9 +20,9 @@ with FTP('127.0.0.1') as ftp:
 
     # ftp.delete('book.txt')
 
-    # with open('from_user.txt', 'rb') as file:
-    #     ftp.storbinary('STOR ' + 'from_user.txt', file)
-    #     ftp.storbinary('STOR ' + file.name, file)
+    with open('from_user.txt', 'rb') as file:
+        # ftp.storbinary('STOR ' + 'from_user.txt', file)
+        ftp.storbinary('STOR ' + file.name, file)
 
-    with open('from_server.txt', 'wb') as file:
-        ftp.retrbinary('RETR ' + 'from_server.txt', file.write)
+    # with open('from_server.txt', 'wb') as file:
+    #     ftp.retrbinary('RETR ' + 'from_server.txt', file.write)
